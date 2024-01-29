@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "jest --watch=false --no-cache --forceExit",
-    "start": "nodemon server.js"
+    "game": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",

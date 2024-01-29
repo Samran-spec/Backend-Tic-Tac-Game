@@ -17,7 +17,6 @@ export const checkWin = (board) => {
         }
     
         return false;
-    
 };
 
 export const checkTie = (board) => {
