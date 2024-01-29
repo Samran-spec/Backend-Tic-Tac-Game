@@ -48,6 +48,12 @@ export const makeMove = async (req, res) => {
         status: game.status,
         player: game.currentPlayer,
       });
+    } else if (checkTie(game.board)) {
+      game.status = "tied";
+      await game.save();
+      return res.status(200).send({
+        status: game.status,
+      });
     } else {
       // Switch the current player
       game.currentPlayer = game.currentPlayer === "X" ? "O" : "X";

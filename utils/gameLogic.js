@@ -19,3 +19,8 @@ export const checkWin = (board) => {
         return false;
     
 };
+
+export const checkTie = (board) => {
+    // Logic to check if the game is a tie (all positions filled and no winner)
+    return board.every(cell => cell !== null) && !checkWin(board);
+};
